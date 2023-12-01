@@ -1,0 +1,191 @@
+:root {
+    --main-text-color : hsl(223, 98%, 19%);
+    --second-text-color : hsl(0, 0%, 100%);
+    --third-text-color : hsl(0, 0%, 0%);
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+    font-size: 100%;
+    color: var(--main-text-color);
+}
+
+h2 {
+    color: var(--second-text-color);
+    background-color: var(--main-text-color);
+    letter-spacing: .125rem;
+    padding: .3125rem 0;
+}
+
+h4 {
+    color: var(--main-text-color);
+}
+
+ .skills > h2, .languages > h2, .interest > h2  {
+    padding-left: 1.875rem;
+}
+
+ .formations > h2, .xp > h2  {
+    padding-left: 3.125rem;
+}
+
+ul, p {
+    color: var(--third-text-color);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: .625rem;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-weight: 600;
+}
+
+i {
+    margin-right: .5rem;
+}
+
+
+.main-container {  
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr 1fr;
+    /* grid-template-rows: 1.3fr 0.7fr 1.6fr 1.3fr 0.1fr 1fr; */
+    gap: 0rem 0rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "head head head"
+      "skills formations formations"
+      "skills formations formations"
+      "languages formations formations"
+      "interest xp xp"
+      "interest xp xp";
+}
+
+/* CV - Head Part */
+.head { 
+    position: relative;
+    grid-area: head;
+    padding: 0rem 1.875rem;
+}
+
+.head::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12.5rem;
+    height: .625rem;
+    background-color: var(--main-text-color);
+}
+
+.head__infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.head__id__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.125rem;
+}
+
+.head__id h1 {
+    margin-bottom: .625rem;
+}
+
+.head__id h3 {
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+.head__photo {
+    width: 12.5rem;
+    height: 12.5rem;
+    align-self: center;
+    background-image: url(/assets/pepe.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* CV - Formations Part */
+.formations { 
+    grid-area: formations; 
+}
+/* CV - Skills Part */  
+.skills { 
+    grid-area: skills;
+}
+
+
+/* CV - Languages Part */  
+.languages { 
+    grid-area: languages;
+}
+
+.languages h4 {
+    margin-bottom: 1rem;
+}
+
+.languages__stack .languages__stack__items {
+    display: flex;
+    font-size: 1.75rem;
+    gap: .9375rem;
+}
+
+/* CV - Interests Part */  
+.interest { 
+    grid-area: interest;
+}
+
+/* CV - Experiences Part */  
+.xp {
+    position: relative;
+    grid-area: xp;
+}
+
+.xp::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12.5rem;
+    height: .625rem;
+    background-color: var(--main-text-color);
+}
+
+/* CV - Left side Layout Part */
+.left__side  {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.25rem 1.875rem;
+    padding-right: 3.125rem;
+}
+
+
+/* CV - Right side Layout Part */
+.right__side  {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.25rem 3.125rem;
+    padding-right: 3.125rem;
+}
+
+.right__side__item h4 {
+    margin-bottom: .3125rem;
+}
+  
